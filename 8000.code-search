@@ -1,0 +1,17 @@
+# Query: 8000
+# ContextLines: 1
+
+4 results - 2 files
+
+README.md:
+  52  
+  53: The API is at `http://127.0.0.1:8001`; interactive API documentation is at `http://127.0.0.1:8000/docs`. On first startup, tables are created and fictional demonstration records are seeded into `backend/smart_route.db`. The seed runs only if the users table is empty. The database survives restarts.
+  54  
+
+  66  
+  67: Open `http://127.0.0.1:5173`. Vite proxies no API calls: the frontend calls the local API at `http://127.0.0.1:8000/api`. Keep both terminal processes running.
+  68  
+
+frontend/src/api.ts:
+  1: const BASE_URL = import.meta.env.VITE_API_URL ?? 'http://127.0.0.1:8001/api'
+  2  
